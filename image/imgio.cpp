@@ -34,6 +34,7 @@
 #include          "memry.h"
 #include          "imgs.h"
 #include          "imgbmp.h"
+#include          "imgjpeg.h"
 #include          "imgtiff.h"
 #include          "imgio.h"
 
@@ -70,6 +71,12 @@ static IMAGETYPE imagetypes[] = { {
     open_bmp_image,
     read_bmp_image,
     write_bmp_image
+  },
+  {
+    "jpg",
+    open_jpeg_image,
+    read_jpeg_image,
+    write_jpeg_image
   },
 };                               //image readers/writers
 

@@ -59,7 +59,7 @@ libtesseract_image_a_AR = $(AR) $(ARFLAGS)
 libtesseract_image_a_LIBADD =
 am_libtesseract_image_a_OBJECTS = imgbmp.$(OBJEXT) imgio.$(OBJEXT) \
 	imgs.$(OBJEXT) imgtiff.$(OBJEXT) bitstrm.$(OBJEXT) \
-	svshowim.$(OBJEXT)
+	svshowim.$(OBJEXT) imgjpeg.$(OBJEXT)
 libtesseract_image_a_OBJECTS = $(am_libtesseract_image_a_OBJECTS)
 DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)
 depcomp = $(SHELL) $(top_srcdir)/config/depcomp
@@ -194,11 +194,11 @@ SUBDIRS =
 AM_CPPFLAGS = -I$(top_srcdir)/ccutil -I$(top_srcdir)/viewer
 include_HEADERS = \
     bitstrm.h imgbmp.h imgerrs.h img.h imgio.h imgs.h \
-    imgtiff.h imgunpk.h svshowim.h
+    imgtiff.h imgunpk.h svshowim.h imgjpeg.h
 
 lib_LIBRARIES = libtesseract_image.a
 libtesseract_image_a_SOURCES = \
-    imgbmp.cpp imgio.cpp imgs.cpp imgtiff.cpp bitstrm.cpp svshowim.cpp
+    imgbmp.cpp imgio.cpp imgs.cpp imgtiff.cpp bitstrm.cpp svshowim.cpp imgjpeg.cpp
 
 all: all-recursive
 
@@ -276,6 +276,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/bitstrm.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/imgbmp.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/imgio.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/imgjpeg.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/imgs.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/imgtiff.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/svshowim.Po@am__quote@
